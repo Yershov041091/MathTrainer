@@ -16,6 +16,7 @@
 		55038E922A5C5A1D0019019D /* MathTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55038E912A5C5A1D0019019D /* MathTrainerTests.swift */; };
 		55038E9C2A5C5A1D0019019D /* MathTrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55038E9B2A5C5A1D0019019D /* MathTrainerUITests.swift */; };
 		55038E9E2A5C5A1D0019019D /* MathTrainerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55038E9D2A5C5A1D0019019D /* MathTrainerUITestsLaunchTests.swift */; };
+		55038EAB2A5DADD80019019D /* TraineVewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55038EAA2A5DADD80019019D /* TraineVewControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		55038E972A5C5A1D0019019D /* MathTrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathTrainerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55038E9B2A5C5A1D0019019D /* MathTrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTrainerUITests.swift; sourceTree = "<group>"; };
 		55038E9D2A5C5A1D0019019D /* MathTrainerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTrainerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55038EAA2A5DADD80019019D /* TraineVewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraineVewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				55038E7C2A5C5A1C0019019D /* SceneDelegate.swift */,
 				55038E7E2A5C5A1C0019019D /* ViewController.swift */,
 				55038E802A5C5A1C0019019D /* Main.storyboard */,
+				55038EAA2A5DADD80019019D /* TraineVewControler.swift */,
 				55038E832A5C5A1D0019019D /* Assets.xcassets */,
 				55038E852A5C5A1D0019019D /* LaunchScreen.storyboard */,
 				55038E882A5C5A1D0019019D /* Info.plist */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55038EAB2A5DADD80019019D /* TraineVewControler.swift in Sources */,
 				55038E7F2A5C5A1C0019019D /* ViewController.swift in Sources */,
 				55038E7B2A5C5A1C0019019D /* AppDelegate.swift in Sources */,
 				55038E7D2A5C5A1C0019019D /* SceneDelegate.swift in Sources */,

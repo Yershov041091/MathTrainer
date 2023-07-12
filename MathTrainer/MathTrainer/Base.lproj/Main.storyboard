@@ -219,11 +219,104 @@
                         <outletCollection property="buttonsCollection" destination="hOk-51-KI9" collectionClass="NSMutableArray" id="OOG-NJ-7RR"/>
                         <outletCollection property="buttonsCollection" destination="GWh-77-eLl" collectionClass="NSMutableArray" id="h8M-4b-Rqg"/>
                         <outletCollection property="buttonsCollection" destination="cbj-FE-WNp" collectionClass="NSMutableArray" id="fgR-A6-u6P"/>
+                        <segue destination="Yg3-3B-lxU" kind="show" identifier="goToNext" id="S0X-3L-JZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="83" y="4"/>
+        </scene>
+        <!--Train View Controler-->
+        <scene sceneID="xWe-ff-pJq">
+            <objects>
+                <viewController id="Yg3-3B-lxU" customClass="TrainViewControler" customModule="MathTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utc-iB-99N">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-pI-DBe">
+                                <rect key="frame" x="50.000000000000007" y="50" width="73.666666666666686" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bmx-Il-5Wv" kind="unwind" unwindAction="backActionWithAnwindSegue:" id="0PB-bU-m6W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="53 + 15 =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5A-rE-JtQ">
+                                <rect key="frame" x="105.66666666666669" y="367" width="182" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M7-n9-qv3">
+                                <rect key="frame" x="96.666666666666686" y="525" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="YJJ-33-t98"/>
+                                    <constraint firstAttribute="height" constant="80" id="nS5-Qr-A4g"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="23">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="30"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcN-TU-WNU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz1-1y-cYS">
+                                <rect key="frame" x="216.66666666666663" y="525" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fRQ-Gb-Y9V"/>
+                                    <constraint firstAttribute="width" constant="80" id="kUb-ae-7m5"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="56">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="30"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMr-aG-ZcO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PU2-pE-vQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3M7-n9-qv3" firstAttribute="centerX" secondItem="utc-iB-99N" secondAttribute="centerX" constant="-60" id="0sk-FT-WgS"/>
+                            <constraint firstItem="U5A-rE-JtQ" firstAttribute="centerY" secondItem="utc-iB-99N" secondAttribute="centerY" constant="-30" id="6lB-Cx-et0"/>
+                            <constraint firstItem="f9W-pI-DBe" firstAttribute="leading" secondItem="PU2-pE-vQc" secondAttribute="leading" constant="50" id="7pO-y1-Nlq"/>
+                            <constraint firstItem="f9W-pI-DBe" firstAttribute="top" secondItem="PU2-pE-vQc" secondAttribute="top" constant="50" id="B5F-Vg-UUy"/>
+                            <constraint firstItem="3M7-n9-qv3" firstAttribute="top" secondItem="U5A-rE-JtQ" secondAttribute="bottom" constant="110" id="aau-RR-cjk"/>
+                            <constraint firstItem="U5A-rE-JtQ" firstAttribute="centerX" secondItem="utc-iB-99N" secondAttribute="centerX" id="n8L-Ee-1Cu"/>
+                            <constraint firstItem="Wz1-1y-cYS" firstAttribute="centerX" secondItem="utc-iB-99N" secondAttribute="centerX" constant="60" id="ucO-ha-fgi"/>
+                            <constraint firstItem="Wz1-1y-cYS" firstAttribute="centerY" secondItem="3M7-n9-qv3" secondAttribute="centerY" id="vr7-Gf-Nb3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cw6-9s-Imn"/>
+                    <connections>
+                        <outlet property="backButton" destination="f9W-pI-DBe" id="8hp-YT-mG5"/>
+                        <outletCollection property="buttonsCollection" destination="3M7-n9-qv3" collectionClass="NSMutableArray" id="IEe-hu-Xg9"/>
+                        <outletCollection property="buttonsCollection" destination="Wz1-1y-cYS" collectionClass="NSMutableArray" id="hRM-iT-zdz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCK-RS-rKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bmx-Il-5Wv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="4"/>
         </scene>
     </scenes>
     <resources>

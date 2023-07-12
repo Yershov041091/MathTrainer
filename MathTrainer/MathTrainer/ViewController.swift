@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var buttonsCollection: [UIButton]!
     
+    // MARK: - Properties
+    var selectedType: MathTypes = .add
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +28,19 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func buttonsAction(_ sender: UIButton) {
+        selectedType = MathTypes.init(rawValue: sender.tag) ?? .add
+        performSegue(withIdentifier: "goToNext", sender: sender)
     }
+    @IBAction func backAction(anwindSegue: UIStoryboardSegue) {}
     
     // MARK: - Methods
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewControler = segue.destination as? TrainViewControler {
+            viewControler.type = selectedType
+        }
+    }
+    
     private func configeButtons() {
         buttonsCollection.forEach { button in
             button.layer.shadowColor = UIColor.gray.cgColor
