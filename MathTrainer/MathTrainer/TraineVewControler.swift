@@ -12,6 +12,7 @@ final class TrainViewControler: UIViewController {
     
     // MARK: - Properties
     var type: MathTypes = .add
+    //Добавил проперти двух кнопок и кнопки back
     @IBOutlet var buttonsCollection: [UIButton]!
     @IBOutlet var backButton: UIButton!
     
@@ -21,6 +22,7 @@ final class TrainViewControler: UIViewController {
         configBackButton()
     }
     // MARK: - Methods
+    // тень
     private func shadowButtons() {
         buttonsCollection.forEach { button in
             button.layer.shadowColor = UIColor.black.cgColor
@@ -29,6 +31,7 @@ final class TrainViewControler: UIViewController {
             button.layer.shadowOpacity = 0.4
         }
     }
+    // изменил форму, цвет и тд
     private func configBackButton() {
         backButton.backgroundColor = .systemYellow
         backButton.tintColor = .black
@@ -38,5 +41,6 @@ final class TrainViewControler: UIViewController {
         backButton.layer.shadowRadius = 4
         backButton.layer.shadowOpacity = 0.4
         backButton.layer.cornerRadius = 15
+        // Рома, я забыл что нужно домашку в отдельной ветке делать, просто добавляю комментарий
     }
 }
