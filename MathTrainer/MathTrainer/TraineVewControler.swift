@@ -38,5 +38,6 @@ final class TrainViewControler: UIViewController {
         backButton.layer.shadowRadius = 4
         backButton.layer.shadowOpacity = 0.4
         backButton.layer.cornerRadius = 15
+        // Рома, я забыл что нужно домашку в отдельной ветке делать, просто добавляю комментарий
     }
 }
