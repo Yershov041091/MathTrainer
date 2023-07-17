@@ -268,7 +268,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcN-TU-WNU"/>
+                                    <action selector="leftAction:" destination="Yg3-3B-lxU" eventType="touchUpInside" id="Z34-Ad-4Ag"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz1-1y-cYS">
@@ -289,7 +289,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMr-aG-ZcO"/>
+                                    <action selector="rightAction:" destination="Yg3-3B-lxU" eventType="touchUpInside" id="3WP-bN-KVL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -309,6 +309,7 @@
                     <navigationItem key="navigationItem" id="Cw6-9s-Imn"/>
                     <connections>
                         <outlet property="backButton" destination="f9W-pI-DBe" id="8hp-YT-mG5"/>
+                        <outlet property="quastionLable" destination="U5A-rE-JtQ" id="fFz-7h-Mqj"/>
                         <outletCollection property="buttonsCollection" destination="3M7-n9-qv3" collectionClass="NSMutableArray" id="IEe-hu-Xg9"/>
                         <outletCollection property="buttonsCollection" destination="Wz1-1y-cYS" collectionClass="NSMutableArray" id="hRM-iT-zdz"/>
                     </connections>
