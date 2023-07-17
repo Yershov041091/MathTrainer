@@ -40,6 +40,7 @@ final class TrainViewControler: UIViewController {
     @IBOutlet var buttonsCollection: [UIButton]!
     @IBOutlet var backButton: UIButton!
     @IBOutlet var quastionLable: UILabel!
+    @IBOutlet var scoreLable: UILabel!
     
     private var sign: String = ""
     private var firstNumber = 0
@@ -52,6 +53,7 @@ final class TrainViewControler: UIViewController {
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
+        configeScoreLable()
         configeQuestions()
         configButtons()
         configBackButton()
@@ -97,9 +99,17 @@ final class TrainViewControler: UIViewController {
         backButton.layer.cornerRadius = 15
     }
     private func configeQuestions() {
-        firstNumber = Int.random(in: 1...99)
-        secondNumber = Int.random(in: 1...99)
         
+        if type == .divide {
+            repeat {
+                firstNumber = Int.random(in: 1...99)
+                secondNumber = Int.random(in: 1...99)
+            } while !firstNumber.isMultiple(of: secondNumber)
+
+        } else {
+            firstNumber = Int.random(in: 1...99)
+            secondNumber = Int.random(in: 1...99)
+        }
         let question = "\(firstNumber) \(sign) \(secondNumber) ="
         quastionLable.text = question
     }
@@ -112,12 +122,22 @@ final class TrainViewControler: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
                 self?.configeQuestions()
                 self?.configButtons()
+                self?.configeScoreLable()
             }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
                 self?.configeQuestions()
                 self?.configButtons()
+                self?.configeScoreLable()
             }
         }
+    }
+    private func configeScoreLable() {
+        scoreLable.text = "Your score: \(score)"
+        scoreLable.font.withSize(40)
+        scoreLable.layer.cornerRadius = 40
+        scoreLable.layer.shadowColor = UIColor.black.cgColor
+        scoreLable.layer.shadowOffset = .init(width: 4, height: 4)
+        scoreLable.layer.shadowOpacity = 0.4
     }
 }
