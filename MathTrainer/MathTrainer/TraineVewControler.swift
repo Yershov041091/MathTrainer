@@ -97,9 +97,17 @@ final class TrainViewControler: UIViewController {
         backButton.layer.cornerRadius = 15
     }
     private func configeQuestions() {
-        firstNumber = Int.random(in: 1...99)
-        secondNumber = Int.random(in: 1...99)
         
+        if type == .divide {
+            repeat {
+                firstNumber = Int.random(in: 1...99)
+                secondNumber = Int.random(in: 1...99)
+            } while !firstNumber.isMultiple(of: secondNumber)
+
+        } else {
+            firstNumber = Int.random(in: 1...99)
+            secondNumber = Int.random(in: 1...99)
+        }
         let question = "\(firstNumber) \(sign) \(secondNumber) ="
         quastionLable.text = question
     }
