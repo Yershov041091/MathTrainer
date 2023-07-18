@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet var buttonsCollection: [UIButton]!
+    @IBOutlet var scoreLablesCollection: [UILabel]!
     
     // MARK: - Properties
     var selectedType: MathTypes = .add
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configeButtons()
+        configeScoreButtons()
     }
     
     // MARK: - Actions
@@ -47,6 +49,12 @@ class ViewController: UIViewController {
             button.layer.shadowOffset = CGSize(width: 3, height: 5)
             button.layer.shadowOpacity = 0.6
             button.layer.shadowRadius = 4
+        }
+    }
+    private func configeScoreButtons() {
+        scoreLablesCollection.forEach { lable in
+            lable.font = .boldSystemFont(ofSize: 20)
+            lable.textColor = .darkGray
         }
     }
 }

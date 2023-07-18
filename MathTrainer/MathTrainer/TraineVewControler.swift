@@ -50,6 +50,10 @@ final class TrainViewControler: UIViewController {
             print("Score: \(score)")
         }
     }
+    private var addScore = 0
+    private var substractScore = 0
+    private var multiplyScore = 0
+    private var devideScore = 0
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -123,6 +127,19 @@ final class TrainViewControler: UIViewController {
                 self?.configeQuestions()
                 self?.configButtons()
                 self?.configeScoreLable()
+                
+                switch self?.type {
+                case .add:
+                    self?.addScore += 1
+                case .substract:
+                    self?.substractScore += 1
+                case .multiply:
+                    self?.multiplyScore += 1
+                case .divide:
+                    self?.devideScore += 1
+                case .none:
+                    print("error")
+                }
             }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
@@ -139,5 +156,18 @@ final class TrainViewControler: UIViewController {
         scoreLable.layer.shadowColor = UIColor.black.cgColor
         scoreLable.layer.shadowOffset = .init(width: 4, height: 4)
         scoreLable.layer.shadowOpacity = 0.4
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as? ViewController
+            switch type {
+            case .add:
+                viewController?.scoreLablesCollection[0].text = String(addScore)
+            case .substract:
+                viewController?.scoreLablesCollection[1].text = String(substractScore)
+            case .multiply:
+                viewController?.scoreLablesCollection[2].text = String(multiplyScore)
+            case .divide:
+                viewController?.scoreLablesCollection[3].text = String(devideScore)
+        }
     }
 }
